@@ -8,7 +8,7 @@ const authRoutes=require('./routes/auth')
 app.use(express.json())
 
 const PORT=process.env.PORT || 5000;
-const MONGO_URI = "mongodb://localhost:27017/password_rest_backend";
+const MONGO_URI = process.env.MONGO_URI;
 
 
 mongoose.connect(MONGO_URI)
